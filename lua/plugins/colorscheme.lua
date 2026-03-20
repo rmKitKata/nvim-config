@@ -19,6 +19,8 @@ return {
                         ["@string"] = { fg = colors.text },
                         ["@property"] = { fg = colors.blue },
                         LineNr = { fg = colors.overlay1 },
+                        TelescopeNormal = { bg = "NONE" },
+                        TelescopeBorder = { bg = "NONE" },
                     }
                 end
             })

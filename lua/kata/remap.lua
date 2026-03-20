@@ -28,10 +28,3 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "moves to the leftside split" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "moves to the rightside split" })
-
-vim.keymap.set("n", "<leader>gg", function()
-    vim.opt.splitright = true
-    vim.cmd("vsplit")
-    vim.cmd("vertical resize " .. math.floor(vim.o.columns * 0.4))
-    vim.cmd("terminal lazygit")
-end, { desc = "Open lazygit (right side)" })

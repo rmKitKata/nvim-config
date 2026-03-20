@@ -16,8 +16,9 @@ return {
                 },
                 custom_highlights = function(colors)
                     return {
-                        ["@string"] = { fg = colors.text},
-                        ["@property"] = { fg = colors.blue},
+                        ["@string"] = { fg = colors.text },
+                        ["@property"] = { fg = colors.blue },
+                        LineNr = { fg = colors.overlay1 },
                     }
                 end
             })

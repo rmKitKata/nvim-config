@@ -2,7 +2,7 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+            local capabilities = require('blink.cmp').get_lsp_capabilities()
 
             vim.lsp.config('lua_ls', {
                 capabilities = capabilities,
@@ -29,9 +29,25 @@ return {
     },
 
     {
-        "hrsh7th/nvim-cmp",
-        dependencies = {
-            "hrsh7th/cmp-nvim-lsp",
+        "saghen/blink.cmp",
+        dependencies = { 'rafamadriz/friendly-snippets' },
+        version = "1.*",
+        opts = {
+            -- See :h blink-cmp-config-keymap for defining your own keymap
+            keymap = { preset = 'super-tab' },
+
+            appearance = {
+                nerd_font_variant = 'mono'
+            },
+
+            completion = { documentation = { auto_show = true } },
+
+            sources = {
+                default = { 'lsp', 'path', 'snippets', 'buffer' },
+            },
+
+            fuzzy = { implementation = "prefer_rust_with_warning" }
         },
+        opts_extend = { "sources.default" },
     }
 }

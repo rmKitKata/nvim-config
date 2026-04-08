@@ -1,3 +1,8 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_compiler_method = "latexmk"
+
 require("kata")
 vim.cmd.colorscheme "catppuccin-nvim"
 
@@ -11,6 +16,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
+vim.opt.colorcolumn = "80"
 vim.opt.wrap = false
 
 vim.opt.swapfile = true

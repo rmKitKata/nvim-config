@@ -25,6 +25,26 @@ return {
                 capabilities = capabilities,
             })
             vim.lsp.enable("jdtls")
+
+            vim.lsp.config('cssls', {
+                capabilities = capabilities,
+            })
+            vim.lsp.enable('cssls')
+
+            vim.lsp.config('texlab', {
+                capabilities = capabilities,
+                settings = {
+                    texlab = {
+                        latexFormatter = "latexindent",
+                    },
+                },
+            })
+            vim.lsp.enable("texlab")
+
+            vim.lsp.config('ltex', {
+                capabilities = capabilities,
+            })
+            vim.lsp.enable("ltex")
         end
     },
 
